@@ -6,7 +6,6 @@
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
 <script id="tailwind-config">
       tailwind.config = {
         darkMode: "class",
@@ -78,81 +77,22 @@
                     "stack-md": "16px"
             },
             "fontFamily": {
-                    "label-md": [
-                            "Plus Jakarta Sans"
-                    ],
-                    "body-md": [
-                            "Plus Jakarta Sans"
-                    ],
-                    "headline-sm": [
-                            "Plus Jakarta Sans"
-                    ],
-                    "body-lg": [
-                            "Plus Jakarta Sans"
-                    ],
-                    "headline-md": [
-                            "Plus Jakarta Sans"
-                    ],
-                    "headline-lg-mobile": [
-                            "Plus Jakarta Sans"
-                    ],
-                    "headline-lg": [
-                            "Plus Jakarta Sans"
-                    ]
+                    "label-md": ["Plus Jakarta Sans"],
+                    "body-md": ["Plus Jakarta Sans"],
+                    "headline-sm": ["Plus Jakarta Sans"],
+                    "body-lg": ["Plus Jakarta Sans"],
+                    "headline-md": ["Plus Jakarta Sans"],
+                    "headline-lg-mobile": ["Plus Jakarta Sans"],
+                    "headline-lg": ["Plus Jakarta Sans"]
             },
             "fontSize": {
-                    "label-md": [
-                            "13px",
-                            {
-                                    "lineHeight": "16px",
-                                    "letterSpacing": "0.05em",
-                                    "fontWeight": "600"
-                            }
-                    ],
-                    "body-md": [
-                            "14px",
-                            {
-                                    "lineHeight": "20px",
-                                    "fontWeight": "400"
-                            }
-                    ],
-                    "headline-sm": [
-                            "18px",
-                            {
-                                    "lineHeight": "24px",
-                                    "fontWeight": "600"
-                            }
-                    ],
-                    "body-lg": [
-                            "16px",
-                            {
-                                    "lineHeight": "24px",
-                                    "fontWeight": "400"
-                            }
-                    ],
-                    "headline-md": [
-                            "22px",
-                            {
-                                    "lineHeight": "28px",
-                                    "letterSpacing": "-0.01em",
-                                    "fontWeight": "700"
-                            }
-                    ],
-                    "headline-lg-mobile": [
-                            "26px",
-                            {
-                                    "lineHeight": "32px",
-                                    "fontWeight": "700"
-                            }
-                    ],
-                    "headline-lg": [
-                            "30px",
-                            {
-                                    "lineHeight": "38px",
-                                    "letterSpacing": "-0.02em",
-                                    "fontWeight": "700"
-                            }
-                    ]
+                    "label-md": ["13px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "body-md": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                    "headline-sm": ["18px", {"lineHeight": "24px", "fontWeight": "600"}],
+                    "body-lg": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "headline-md": ["22px", {"lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "headline-lg-mobile": ["26px", {"lineHeight": "32px", "fontWeight": "700"}],
+                    "headline-lg": ["30px", {"lineHeight": "38px", "letterSpacing": "-0.02em", "fontWeight": "700"}]
             }
     },
         },
@@ -177,7 +117,7 @@
             border-color: transparent;
         }
         .toggle-label {
-            background-color: #e0c0af; /* Soft outline-variant */
+            background-color: #e0c0af;
             transition: all 0.3s ease-in-out;
         }
         .toggle-dot {
@@ -198,43 +138,39 @@
   </head>
 <body class="bg-background text-on-background min-h-screen flex justify-center items-center font-body-md p-4 sm:p-8">
 <div class="w-full max-w-[400px] h-[850px] bg-background rounded-[40px] shadow-2xl overflow-hidden relative flex flex-col border-[8px] border-surface-container-highest">
-<div class="flex justify-between items-center px-6 py-4 text-xs font-semibold">
-<span>9:41</span>
-<div class="flex space-x-2">
-<span class="material-symbols-outlined text-sm">signal_cellular_4_bar</span>
-<span class="material-symbols-outlined text-sm">wifi</span>
-<span class="material-symbols-outlined text-sm">battery_full</span>
-</div>
-</div>
-<div class="flex justify-between items-center px-margin-page pt-4 pb-2">
+
+<div class="flex justify-between items-center px-margin-page pt-8 pb-2">
 <h1 class="font-headline-lg-mobile text-headline-lg-mobile text-on-background tracking-tight">New habit</h1>
 <a href="../home_dashboard/code.html" class="w-10 h-10 bg-surface-container-lowest rounded-full flex justify-center items-center shadow-sm hover:scale-95 transition-transform">
 <span class="material-symbols-outlined text-on-background">close</span>
 </a>
 </div>
+
 <div class="flex-1 overflow-y-auto px-margin-page pb-32">
 <div class="flex justify-center py-stack-xl">
 <div class="w-40 h-40 relative flex justify-center items-center">
-<img alt="A cute, stylized 3D illustration of a green calendar with a cheerful face, surrounded by small abstract celebratory squiggles in orange and pink, sitting on a soft beige background. The lighting is soft and playful, matching a light-mode mindful productivity app aesthetic." class="w-full h-full object-contain mix-blend-multiply opacity-90 filter hue-rotate-90 saturate-150 contrast-125" data-alt="A cute, stylized 3D illustration of a green calendar with a cheerful face, surrounded by small abstract celebratory squiggles in orange and pink, sitting on a soft beige background. The lighting is soft and playful, matching a light-mode mindful productivity app aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB0N-82iU72VVUMNKde3V_zFcVLPq9Vqe2hCzfjVgHEVFby4ryiT-eec839mUjI97fhcKh9rCAv7XM8jOkOK3aR0V4HDVt4WxucIp47PtnmJP90znJxgxhtX5gJC8rOek7SjDU7FHT6R5DRAcPpF_zLEH6iktTKBnn32tOcU4LW3hfFTnVr9XWKARwRBcjRc4LY00OlB6nXDHKz9O9zLjPjAXlHTAWEgr4ChOdDJ5x4P8DcTGGXih7SR00a0fMckiWe2GOjikUpCeY" style="clip-path: circle(40%);"/>
+<img alt="A cute, stylized 3D illustration of a green calendar" class="w-full h-full object-contain mix-blend-multiply opacity-90 filter hue-rotate-90 saturate-150 contrast-125" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB0N-82iU72VVUMNKde3V_zFcVLPq9Vqe2hCzfjVgHEVFby4ryiT-eec839mUjI97fhcKh9rCAv7XM8jOkOK3aR0V4HDVt4WxucIp47PtnmJP90znJxgxhtX5gJC8rOek7SjDU7FHT6R5DRAcPpF_zLEH6iktTKBnn32tOcU4LW3hfFTnVr9XWKARwRBcjRc4LY00OlB6nXDHKz9O9zLjPjAXlHTAWEgr4ChOdDJ5x4P8DcTGGXih7SR00a0fMckiWe2GOjikUpCeY" style="clip-path: circle(40%);"/>
 <div class="absolute inset-0 border-4 border-tertiary-container rounded-3xl opacity-20 pointer-events-none transform rotate-3"></div>
 </div>
 </div>
+
 <div class="space-y-stack-xl">
 <div class="space-y-stack-sm">
 <label class="font-body-md text-on-surface-variant block ml-1">Name your habit</label>
 <div class="relative">
-<input class="w-full bg-surface-container-lowest border-none rounded-2xl py-4 px-5 font-body-lg text-on-background shadow-[0_4px_20px_rgba(29,29,31,0.02)] focus:ring-2 focus:ring-primary-container outline-none transition-shadow" type="text" value="Morning Meditations"/>
+<input class="w-full bg-surface-container-lowest border-none rounded-2xl py-4 px-5 font-body-lg text-on-background shadow-[0_4px_20px_rgba(29,29,31,0.02)] focus:ring-2 focus:ring-primary-container outline-none transition-shadow placeholder:text-on-surface-variant/40" type="text" placeholder="Morning Meditations" value=""/>
 </div>
 </div>
+
 <div class="space-y-stack-sm">
 <div class="flex justify-between items-center mb-1">
 <label class="font-body-md text-on-surface-variant ml-1">Set a goal</label>
 <input class="w-5 h-5 rounded border-outline-variant text-primary-container focus:ring-primary-container bg-surface-container-lowest shadow-sm" type="checkbox"/>
 </div>
 <div class="grid grid-cols-2 gap-4">
-<div class="relative">
-<input class="w-full bg-surface-container-lowest border-none rounded-2xl py-4 pl-5 pr-10 font-body-md text-on-background placeholder:text-on-surface-variant/60 shadow-[0_4px_20px_rgba(29,29,31,0.02)] focus:ring-2 focus:ring-primary-container outline-none" placeholder="Add date" type="text"/>
-<span class="material-symbols-outlined absolute right-4 top-1/2 -translate-y-1/2 text-on-surface-variant">calendar_today</span>
+<div class="relative cursor-pointer" id="date-picker-trigger">
+<input id="date-input" readonly class="w-full bg-surface-container-lowest border-none rounded-2xl py-4 pl-5 pr-10 font-body-md text-on-background placeholder:text-on-surface-variant/60 shadow-[0_4px_20px_rgba(29,29,31,0.02)] focus:ring-2 focus:ring-primary-container outline-none cursor-pointer" placeholder="Add date" type="text"/>
+<span class="material-symbols-outlined absolute right-4 top-1/2 -translate-y-1/2 text-on-surface-variant pointer-events-none">calendar_today</span>
 </div>
 <div class="relative">
 <input class="w-full bg-surface-container-lowest border-none rounded-2xl py-4 pl-5 pr-10 font-body-md text-on-background placeholder:text-on-surface-variant/60 shadow-[0_4px_20px_rgba(29,29,31,0.02)] focus:ring-2 focus:ring-primary-container outline-none" placeholder="Add amount" type="text"/>
@@ -242,6 +178,7 @@
 </div>
 </div>
 </div>
+
 <div class="space-y-stack-sm">
 <div class="flex justify-between items-center mb-1">
 <label class="font-body-md text-on-surface-variant ml-1">Repeat days</label>
@@ -257,6 +194,7 @@
 <button class="w-10 h-10 rounded-full bg-surface-container-lowest text-on-background font-headline-sm shadow-sm hover:bg-surface-variant transition-colors flex items-center justify-center">S</button>
 </div>
 </div>
+
 <div class="flex justify-between items-center py-2">
 <label class="font-body-md text-on-surface-variant ml-1">Get reminders</label>
 <div class="relative inline-block w-12 mr-2 align-middle select-none transition duration-200 ease-in">
@@ -267,11 +205,98 @@
 </div>
 </div>
 </div>
-<div class="absolute bottom-0 w-full px-margin-page pb-8 pt-4 bg-gradient-to-t from-background via-background to-transparent">
+
+<div class="absolute bottom-0 w-full px-margin-page pb-8 pt-4 bg-gradient-to-t from-background via-background to-transparent z-10">
 <a href="../home_dashboard/code.html" class="block w-full bg-primary-container text-on-primary rounded-full py-4 font-headline-sm text-center shadow-[0_12px_24px_rgba(91,52,43,0.12)] hover:opacity-90 active:scale-[0.98] transition-all">
                 Save Habit
 </a>
 <div class="w-1/3 h-1 bg-on-background/20 rounded-full mx-auto mt-6"></div>
 </div>
+
+<div id="datepicker-backdrop" class="absolute inset-0 bg-on-background/30 backdrop-blur-sm hidden opacity-0 transition-opacity duration-300 ease-in-out z-40"></div>
+<div id="datepicker-sheet" class="absolute bottom-0 left-0 right-0 bg-surface rounded-t-[32px] shadow-2xl border-t border-surface-variant transform translate-y-full transition-transform duration-300 ease-in-out z-50 p-6 flex flex-col gap-4">
+    <div class="flex justify-between items-center">
+        <h3 class="font-headline-sm text-on-background">Select Date</h3>
+        <button id="close-datepicker" class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-on-surface hover:bg-surface-variant transition-colors">
+            <span class="material-symbols-outlined text-lg">close</span>
+        </button>
+    </div>
+    
+    <div class="flex justify-between items-center bg-surface-container-low px-4 py-2 rounded-xl">
+        <button class="material-symbols-outlined text-on-surface-variant text-md hover:text-primary">chevron_left</button>
+        <span class="font-headline-sm text-[15px] text-on-background">May 2026</span>
+        <button class="material-symbols-outlined text-on-surface-variant text-md hover:text-primary">chevron_right</button>
+    </div>
+
+    <div class="grid grid-cols-7 gap-y-2 text-center font-body-md text-xs text-on-surface-variant font-medium">
+        <span class="opacity-50">S</span><span class="opacity-50">M</span><span class="opacity-50">T</span><span class="opacity-50">W</span><span class="opacity-50">T</span><span class="opacity-50">F</span><span class="opacity-50">S</span>
+        
+        <span></span><span></span><span></span><span></span><span></span>
+        
+        <button class="w-8 h-8 rounded-full flex items-center justify-center mx-auto hover:bg-surface-container-high transition-colors">1</button>
+        <button class="w-8 h-8 rounded-full flex items-center justify-center mx-auto hover:bg-surface-container-high transition-colors">2</button>
+        <button class="w-8 h-8 rounded-full flex items-center justify-center mx-auto hover:bg-surface-container-high transition-colors">3</button>
+        <button class="w-8 h-8 rounded-full flex items-center justify-center mx-auto hover:bg-surface-container-high transition-colors">4</button>
+        <button class="w-8 h-8 rounded-full flex items-center justify-center mx-auto hover:bg-surface-container-high transition-colors">5</button>
+        <button class="w-8 h-8 rounded-full flex items-center justify-center mx-auto hover:bg-surface-container-high transition-colors">6</button>
+        <button class="w-8 h-8 rounded-full flex items-center justify-center mx-auto hover:bg-surface-container-high transition-colors">7</button>
+        <button class="w-8 h-8 rounded-full flex items-center justify-center mx-auto hover:bg-surface-container-high transition-colors">8</button>
+        <button class="w-8 h-8 rounded-full flex items-center justify-center mx-auto hover:bg-surface-container-high transition-colors">9</button>
+        <button class="w-8 h-8 rounded-full bg-primary-container text-white font-semibold scale-105 flex items-center justify-center mx-auto shadow-sm">10</button>
+        <button class="w-8 h-8 rounded-full flex items-center justify-center mx-auto hover:bg-surface-container-high transition-colors">11</button>
+        <button class="w-8 h-8 rounded-full flex items-center justify-center mx-auto hover:bg-surface-container-high transition-colors">12</button>
+        <button class="w-8 h-8 rounded-full flex items-center justify-center mx-auto hover:bg-surface-container-high transition-colors">13</button>
+        <button class="w-8 h-8 rounded-full flex items-center justify-center mx-auto hover:bg-surface-container-high transition-colors">14</button>
+        <button class="w-8 h-8 rounded-full flex items-center justify-center mx-auto hover:bg-surface-container-high transition-colors">15</button>
+        <button class="w-8 h-8 rounded-full flex items-center justify-center mx-auto hover:bg-surface-container-high transition-colors">16</button>
+        <button class="w-8 h-8 rounded-full flex items-center justify-center mx-auto hover:bg-surface-container-high transition-colors">17</button>
+        <button class="w-8 h-8 rounded-full flex items-center justify-center mx-auto hover:bg-surface-container-high transition-colors">18</button>
+        <button class="w-8 h-8 rounded-full flex items-center justify-center mx-auto hover:bg-surface-container-high transition-colors">19</button>
+        <button class="w-8 h-8 rounded-full flex items-center justify-center mx-auto hover:bg-surface-container-high transition-colors">20</button>
+        <button class="w-8 h-8 rounded-full flex items-center justify-center mx-auto hover:bg-surface-container-high transition-colors">21</button>
+    </div>
+
+    <button id="apply-date" class="w-full bg-primary text-white font-label-md text-[14px] py-3.5 rounded-full shadow-float hover:opacity-90 active:scale-[0.99] transition-all mt-2">
+        Apply Selection
+    </button>
 </div>
+
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const trigger = document.getElementById('date-picker-trigger');
+        const backdrop = document.getElementById('datepicker-backdrop');
+        const sheet = document.getElementById('datepicker-sheet');
+        const closeBtn = document.getElementById('close-datepicker');
+        const applyBtn = document.getElementById('apply-date');
+        const dateInput = document.getElementById('date-input');
+
+        function openDatePicker() {
+            backdrop.classList.remove('hidden');
+            setTimeout(() => {
+                backdrop.classList.remove('opacity-0');
+                sheet.classList.remove('translate-y-full');
+            }, 10);
+        }
+
+        function closeDatePicker() {
+            backdrop.classList.add('opacity-0');
+            sheet.classList.add('translate-y-full');
+            setTimeout(() => {
+                backdrop.classList.add('hidden');
+            }, 300);
+        }
+
+        trigger.addEventListener('click', openDatePicker);
+        closeBtn.addEventListener('click', closeDatePicker);
+        backdrop.addEventListener('click', closeDatePicker);
+
+        // Dummy interactive selection filling
+        applyBtn.addEventListener('click', () => {
+            dateInput.value = "May 10, 2026";
+            closeDatePicker();
+        });
+    });
+</script>
 </body></html>

@@ -84,15 +84,6 @@
                     "headline-md": ["Plus Jakarta Sans"],
                     "headline-lg-mobile": ["Plus Jakarta Sans"],
                     "headline-lg": ["Plus Jakarta Sans"]
-            },
-            "fontSize": {
-                    "label-md": ["13px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}],
-                    "body-md": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
-                    "headline-sm": ["18px", {"lineHeight": "24px", "fontWeight": "600"}],
-                    "body-lg": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
-                    "headline-md": ["22px", {"lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
-                    "headline-lg-mobile": ["26px", {"lineHeight": "32px", "fontWeight": "700"}],
-                    "headline-lg": ["30px", {"lineHeight": "38px", "letterSpacing": "-0.02em", "fontWeight": "700"}]
             }
     },
         },
@@ -104,37 +95,17 @@
             -moz-osx-font-smoothing: grayscale;
         }
         /* Custom Toggle Styles */
-        .toggle-checkbox:checked {
-            right: 0;
-            border-color: #ff7a00;
-        }
-        .toggle-checkbox:checked + .toggle-label {
-            background-color: #ff7a00;
-        }
-        .toggle-checkbox {
-            right: 0;
-            z-index: 1;
-            border-color: transparent;
-        }
-        .toggle-label {
-            background-color: #e0c0af;
-            transition: all 0.3s ease-in-out;
-        }
-        .toggle-dot {
-            top: 2px;
-            left: 2px;
-            transition: all 0.3s ease-in-out;
-        }
-        .toggle-checkbox:checked ~ .toggle-dot {
-            transform: translateX(100%);
-            background-color: white;
-        }
+        .toggle-checkbox:checked { right: 0; border-color: #ff7a00; }
+        .toggle-checkbox:checked + .toggle-label { background-color: #ff7a00; }
+        .toggle-checkbox { right: 0; z-index: 1; border-color: transparent; }
+        .toggle-label { background-color: #e0c0af; transition: all 0.3s ease-in-out; }
+        .toggle-dot { top: 2px; left: 2px; transition: all 0.3s ease-in-out; }
+        .toggle-checkbox:checked ~ .toggle-dot { transform: translateX(100%); background-color: white; }
+        
+        /* Hide scrollbar for seamless dropdown */
+        select { -webkit-appearance: none; -moz-appearance: none; appearance: none; text-align: center;}
+        body { min-height: max(884px, 100dvh); }
     </style>
-<style>
-    body {
-      min-height: max(884px, 100dvh);
-    }
-  </style>
   </head>
 <body class="bg-background text-on-background min-h-screen flex justify-center items-center font-body-md p-4 sm:p-8">
 <div class="w-full max-w-[400px] h-[850px] bg-background rounded-[40px] shadow-2xl overflow-hidden relative flex flex-col border-[8px] border-surface-container-highest">
@@ -223,38 +194,22 @@
     </div>
     
     <div class="flex justify-between items-center bg-surface-container-low px-4 py-2 rounded-xl">
-        <button class="material-symbols-outlined text-on-surface-variant text-md hover:text-primary">chevron_left</button>
-        <span class="font-headline-sm text-[15px] text-on-background">May 2026</span>
-        <button class="material-symbols-outlined text-on-surface-variant text-md hover:text-primary">chevron_right</button>
+        <button id="prev-month" class="material-symbols-outlined text-on-surface-variant text-md hover:text-primary transition-colors">chevron_left</button>
+        
+        <div class="flex gap-2 font-headline-sm text-[16px] text-on-background">
+            <select id="month-select" class="bg-transparent outline-none cursor-pointer hover:text-primary transition-colors"></select>
+            <select id="year-select" class="bg-transparent outline-none cursor-pointer hover:text-primary transition-colors"></select>
+        </div>
+
+        <button id="next-month" class="material-symbols-outlined text-on-surface-variant text-md hover:text-primary transition-colors">chevron_right</button>
     </div>
 
-    <div class="grid grid-cols-7 gap-y-2 text-center font-body-md text-xs text-on-surface-variant font-medium">
-        <span class="opacity-50">S</span><span class="opacity-50">M</span><span class="opacity-50">T</span><span class="opacity-50">W</span><span class="opacity-50">T</span><span class="opacity-50">F</span><span class="opacity-50">S</span>
-        
-        <span></span><span></span><span></span><span></span><span></span>
-        
-        <button class="w-8 h-8 rounded-full flex items-center justify-center mx-auto hover:bg-surface-container-high transition-colors">1</button>
-        <button class="w-8 h-8 rounded-full flex items-center justify-center mx-auto hover:bg-surface-container-high transition-colors">2</button>
-        <button class="w-8 h-8 rounded-full flex items-center justify-center mx-auto hover:bg-surface-container-high transition-colors">3</button>
-        <button class="w-8 h-8 rounded-full flex items-center justify-center mx-auto hover:bg-surface-container-high transition-colors">4</button>
-        <button class="w-8 h-8 rounded-full flex items-center justify-center mx-auto hover:bg-surface-container-high transition-colors">5</button>
-        <button class="w-8 h-8 rounded-full flex items-center justify-center mx-auto hover:bg-surface-container-high transition-colors">6</button>
-        <button class="w-8 h-8 rounded-full flex items-center justify-center mx-auto hover:bg-surface-container-high transition-colors">7</button>
-        <button class="w-8 h-8 rounded-full flex items-center justify-center mx-auto hover:bg-surface-container-high transition-colors">8</button>
-        <button class="w-8 h-8 rounded-full flex items-center justify-center mx-auto hover:bg-surface-container-high transition-colors">9</button>
-        <button class="w-8 h-8 rounded-full bg-primary-container text-white font-semibold scale-105 flex items-center justify-center mx-auto shadow-sm">10</button>
-        <button class="w-8 h-8 rounded-full flex items-center justify-center mx-auto hover:bg-surface-container-high transition-colors">11</button>
-        <button class="w-8 h-8 rounded-full flex items-center justify-center mx-auto hover:bg-surface-container-high transition-colors">12</button>
-        <button class="w-8 h-8 rounded-full flex items-center justify-center mx-auto hover:bg-surface-container-high transition-colors">13</button>
-        <button class="w-8 h-8 rounded-full flex items-center justify-center mx-auto hover:bg-surface-container-high transition-colors">14</button>
-        <button class="w-8 h-8 rounded-full flex items-center justify-center mx-auto hover:bg-surface-container-high transition-colors">15</button>
-        <button class="w-8 h-8 rounded-full flex items-center justify-center mx-auto hover:bg-surface-container-high transition-colors">16</button>
-        <button class="w-8 h-8 rounded-full flex items-center justify-center mx-auto hover:bg-surface-container-high transition-colors">17</button>
-        <button class="w-8 h-8 rounded-full flex items-center justify-center mx-auto hover:bg-surface-container-high transition-colors">18</button>
-        <button class="w-8 h-8 rounded-full flex items-center justify-center mx-auto hover:bg-surface-container-high transition-colors">19</button>
-        <button class="w-8 h-8 rounded-full flex items-center justify-center mx-auto hover:bg-surface-container-high transition-colors">20</button>
-        <button class="w-8 h-8 rounded-full flex items-center justify-center mx-auto hover:bg-surface-container-high transition-colors">21</button>
+    <div class="grid grid-cols-7 text-center font-body-md text-xs text-on-surface-variant font-semibold mb-1">
+        <span>Su</span><span>Mo</span><span>Tu</span><span>We</span><span>Th</span><span>Fr</span><span>Sa</span>
     </div>
+    
+    <div id="calendar-days" class="grid grid-cols-7 gap-y-2 text-center font-body-md text-[14px]">
+        </div>
 
     <button id="apply-date" class="w-full bg-primary text-white font-label-md text-[14px] py-3.5 rounded-full shadow-float hover:opacity-90 active:scale-[0.99] transition-all mt-2">
         Apply Selection
@@ -265,38 +220,148 @@
 
 <script>
     document.addEventListener("DOMContentLoaded", () => {
+        // Elements
         const trigger = document.getElementById('date-picker-trigger');
         const backdrop = document.getElementById('datepicker-backdrop');
         const sheet = document.getElementById('datepicker-sheet');
         const closeBtn = document.getElementById('close-datepicker');
         const applyBtn = document.getElementById('apply-date');
         const dateInput = document.getElementById('date-input');
+        
+        const monthSelect = document.getElementById('month-select');
+        const yearSelect = document.getElementById('year-select');
+        const calendarDays = document.getElementById('calendar-days');
+        const prevMonthBtn = document.getElementById('prev-month');
+        const nextMonthBtn = document.getElementById('next-month');
 
+        const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+        
+        // System Data
+        let today = new Date();
+        let currentMonth = today.getMonth(); // 0-11
+        let currentYear = today.getFullYear();
+        
+        // Selected Data (Defaults to today)
+        let selectedDay = today.getDate();
+        let selectedMonth = today.getMonth();
+        let selectedYear = today.getFullYear();
+
+        // 1. Populate Dropdowns
+        months.forEach((month, index) => {
+            const option = document.createElement('option');
+            option.value = index;
+            option.textContent = month;
+            monthSelect.appendChild(option);
+        });
+
+        const startYear = today.getFullYear() - 5;
+        const endYear = today.getFullYear() + 5;
+        for (let y = startYear; y <= endYear; y++) {
+            const option = document.createElement('option');
+            option.value = y;
+            option.textContent = y;
+            yearSelect.appendChild(option);
+        }
+
+        // 2. Render Calendar Function
+        function renderCalendar() {
+            monthSelect.value = currentMonth;
+            yearSelect.value = currentYear;
+            calendarDays.innerHTML = ''; // Clear previous
+
+            const firstDayOfMonth = new Date(currentYear, currentMonth, 1).getDay();
+            const daysInMonth = new Date(currentYear, currentMonth + 1, 0).getDate();
+
+            // Create blank spaces for days before the 1st
+            for (let i = 0; i < firstDayOfMonth; i++) {
+                const blank = document.createElement('div');
+                calendarDays.appendChild(blank);
+            }
+
+            // Create actual day buttons
+            for (let i = 1; i <= daysInMonth; i++) {
+                const dayBtn = document.createElement('button');
+                dayBtn.textContent = i;
+                
+                // Base styling
+                dayBtn.className = "w-8 h-8 rounded-full flex items-center justify-center mx-auto hover:bg-surface-container-high transition-all text-on-background";
+
+                // Highlight Selected Date
+                if (i === selectedDay && currentMonth === selectedMonth && currentYear === selectedYear) {
+                    dayBtn.className = "w-8 h-8 rounded-full bg-primary-container text-white font-semibold scale-110 flex items-center justify-center mx-auto shadow-sm";
+                } 
+                // Mark Today's Date (if not selected)
+                else if (i === today.getDate() && currentMonth === today.getMonth() && currentYear === today.getFullYear()) {
+                    dayBtn.className = "w-8 h-8 rounded-full border border-primary text-primary font-semibold flex items-center justify-center mx-auto";
+                }
+
+                // Click event to select a date
+                dayBtn.addEventListener('click', () => {
+                    selectedDay = i;
+                    selectedMonth = currentMonth;
+                    selectedYear = currentYear;
+                    renderCalendar(); // Refresh UI to move the highlight
+                });
+
+                calendarDays.appendChild(dayBtn);
+            }
+        }
+
+        // 3. Navigation Controls
+        prevMonthBtn.addEventListener('click', () => {
+            currentMonth--;
+            if (currentMonth < 0) { currentMonth = 11; currentYear--; }
+            renderCalendar();
+        });
+
+        nextMonthBtn.addEventListener('click', () => {
+            currentMonth++;
+            if (currentMonth > 11) { currentMonth = 0; currentYear++; }
+            renderCalendar();
+        });
+
+        monthSelect.addEventListener('change', (e) => {
+            currentMonth = parseInt(e.target.value);
+            renderCalendar();
+        });
+
+        yearSelect.addEventListener('change', (e) => {
+            currentYear = parseInt(e.target.value);
+            renderCalendar();
+        });
+
+        // 4. Modal Open/Close Logic
         function openDatePicker() {
             backdrop.classList.remove('hidden');
             setTimeout(() => {
                 backdrop.classList.remove('opacity-0');
                 sheet.classList.remove('translate-y-full');
             }, 10);
+            // Reset view to currently selected date when opening
+            currentMonth = selectedMonth;
+            currentYear = selectedYear;
+            renderCalendar();
         }
 
         function closeDatePicker() {
             backdrop.classList.add('opacity-0');
             sheet.classList.add('translate-y-full');
-            setTimeout(() => {
-                backdrop.classList.add('hidden');
-            }, 300);
+            setTimeout(() => { backdrop.classList.add('hidden'); }, 300);
         }
 
         trigger.addEventListener('click', openDatePicker);
         closeBtn.addEventListener('click', closeDatePicker);
         backdrop.addEventListener('click', closeDatePicker);
 
-        // Dummy interactive selection filling
+        // 5. Apply Button Logic
         applyBtn.addEventListener('click', () => {
-            dateInput.value = "May 10, 2026";
+            // Format format to: Month DD, YYYY (e.g. May 21, 2026)
+            dateInput.value = `${months[selectedMonth]} ${selectedDay}, ${selectedYear}`;
             closeDatePicker();
         });
+
+        // Initialize calendar on load
+        renderCalendar();
     });
 </script>
 </body></html>

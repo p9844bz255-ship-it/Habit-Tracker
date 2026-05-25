@@ -1,0 +1,6 @@
+{
+  "name": "EduPlan",
+  "description": "Sistem monitoring dan penyusunan lesson plan mingguan guru, mendukung Glass-Modern design system.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

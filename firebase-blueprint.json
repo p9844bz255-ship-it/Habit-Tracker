@@ -1,0 +1,85 @@
+{
+  "entities": {
+    "JadwalBiasa": {
+      "title": "JadwalBiasa",
+      "description": "Standard schedule loaded dynamically from Firestore",
+      "type": "object",
+      "properties": {
+        "hari": {
+          "type": "string",
+          "description": "Hari pengajaran (e.g. Senin, Selasa)"
+        },
+        "kelas": {
+          "type": "string",
+          "description": "Nama kelas (e.g. Kelas 10 ME, Kelas 11-A)"
+        },
+        "mapel": {
+          "type": "string",
+          "description": "Mata pelajaran (e.g. Matematika, Fisika)"
+        },
+        "guru": {
+          "type": "string",
+          "description": "Nama ustadz / ustadzah pengajar (e.g. Indra Bayu Muktias)"
+        },
+        "jp": {
+          "type": "string",
+          "description": "Jam pelajaran (e.g. 1-2, 3-4)"
+        },
+        "waktu": {
+          "type": "string",
+          "description": "Waktu pembelajaran (e.g. 07:15 - 08:35)"
+        }
+      },
+      "required": ["hari", "kelas", "mapel", "guru", "jp", "waktu"]
+    },
+    "LessonPlanMetadata": {
+      "title": "LessonPlanMetadata",
+      "description": "Interactive lesson plan content customized by the teacher",
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "class": {
+          "type": "string"
+        },
+        "subject": {
+          "type": "string"
+        },
+        "topic": {
+          "type": "string"
+        },
+        "learningObjective": {
+          "type": "string"
+        },
+        "learningActivities": {
+          "type": "string"
+        },
+        "assessment": {
+          "type": "string"
+        },
+        "status": {
+          "type": "string",
+          "enum": ["Selesai", "Sedang Dikerjakan", "Belum Dimulai"]
+        },
+        "lastUpdate": {
+          "type": "string"
+        },
+        "week": {
+          "type": "string"
+        }
+      },
+      "required": ["class", "subject", "week", "status"]
+    }
+  },
+  "firestore": {
+    "jadwal_biasa": {
+      "schema": "JadwalBiasa",
+      "description": "Dynamic schedules fetched from Firestore"
+    },
+    "lesson_plans": {
+      "schema": "LessonPlanMetadata",
+      "description": "Teachers custom planning inputs linked to their schedule mapping"
+    }
+  }
+}
